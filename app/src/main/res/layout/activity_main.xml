@@ -23,13 +23,13 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/weightButn"
             android:background="@drawable/weight"
             android:layout_above="@+id/percentCompleteButn"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:layout_below="@+id/textView"
-            android:layout_alignEnd="@+id/textView" />
+            android:layout_alignEnd="@+id/textView"
+            android:id="@+id/weightImage" />
 
         <TextView
             android:layout_width="wrap_content"
