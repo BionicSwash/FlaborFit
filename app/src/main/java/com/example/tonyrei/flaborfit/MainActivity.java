@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        assert yogaButn != null;
         yogaButn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        assert cardioButn != null;
         cardioButn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
