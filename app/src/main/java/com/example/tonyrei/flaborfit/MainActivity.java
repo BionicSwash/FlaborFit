@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXERCISE_WEIGHTS = "Weight Lifting";
     public static final String EXERCISE_YOGA ="Yoga";
     public static final String EXERCISE_CARDIO = "Cardio";
+    public static final String SETTINGS_MENU = "Settings";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout weightButn = (RelativeLayout)findViewById(R.id.weightButn);
         RelativeLayout yogaButn = (RelativeLayout)findViewById(R.id.lotusButn);
         RelativeLayout cardioButn = (RelativeLayout)findViewById(R.id.heartButn);
+
 
         assert weightButn != null;
         weightButn.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
 
