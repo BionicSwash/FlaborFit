@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +25,16 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout weightButn = (RelativeLayout)findViewById(R.id.weightButn);
         RelativeLayout yogaButn = (RelativeLayout)findViewById(R.id.lotusButn);
         RelativeLayout cardioButn = (RelativeLayout)findViewById(R.id.heartButn);
+        ImageButton settingsButn = (ImageButton)findViewById(R.id.settingsButn);
 
+        assert settingsButn != null;
+        settingsButn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View V) {
+                loadSettingsActivity(MainActivity.SETTINGS_MENU);
+            }
+
+        });
 
         assert weightButn != null;
         weightButn.setOnClickListener(new View.OnClickListener() {
@@ -50,15 +60,15 @@ public class MainActivity extends AppCompatActivity {
                 loadDetailActivity(MainActivity.EXERCISE_CARDIO);
 
             }
-        });
+        });}
 
-
-
-
-
-
+    private void loadSettingsActivity (String settingsTitle){
+        Intent intent =new Intent(MainActivity.this, SettingsActivity.class);
+        intent.putExtra(MainActivity.SETTINGS_MENU, settingsTitle);
+        startActivity(intent);
 
     }
+
     private void loadDetailActivity (String exerciseTitle){
         Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
         intent.putExtra(MainActivity.EXTRA_ITEM_TITLE, exerciseTitle);
